@@ -1,0 +1,10 @@
+{
+  "name": "date-voice",
+  "version": "1.0.0",
+  "description": "Tap-to-speak date announcer for people with cognitive decline",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "start": "node --version >/dev/null && npx --yes serve ."
+  }
+}
