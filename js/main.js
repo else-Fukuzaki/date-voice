@@ -7,13 +7,10 @@ const tapArea = document.getElementById('tap-area')
 const button = document.getElementById('speak-button')
 
 // 日付と時刻の両方を最新の現在時刻で更新する。
-// 値が変わったときだけ DOM に書き込む（aria-live の重複読み上げ・無駄な更新を防ぐ）。
 function render() {
   const now = new Date()
-  const dateText = formatDisplay(now)
-  const timeText = formatTime(now)
-  if (display.textContent !== dateText) display.textContent = dateText
-  if (timeDisplay.textContent !== timeText) timeDisplay.textContent = timeText
+  display.textContent = formatDisplay(now)
+  timeDisplay.textContent = formatTime(now)
 }
 
 function announce() {
@@ -23,9 +20,6 @@ function announce() {
 
 // 初期表示
 render()
-
-// 動く時計：毎秒チェックし、分が変わったら表示を更新する（日付跨ぎも自動反映）。
-setInterval(render, 1000)
 
 // 画面どこでもタップで読み上げ
 tapArea.addEventListener('click', announce)

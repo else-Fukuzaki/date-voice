@@ -9,20 +9,20 @@ export function formatDisplay(date) {
   return `${month}月${day}日（${weekday}）`
 }
 
+// 音声用：日付＋時刻。時刻は耳に自然なようゼロ埋めしない（24時間制）。
 export function formatSpeech(date) {
   const month = date.getMonth() + 1
   const day = date.getDate()
   const weekday = WEEKDAYS[date.getDay()]
-  return `今日は${month}月${day}日、${weekday}曜日です`
+  const hour = date.getHours()
+  const minute = date.getMinutes()
+  return `今日は${month}月${day}日、${weekday}曜日、${hour}時${minute}分です`
 }
 
-// 12時間制で「午前/午後 ◯時◯◯分」を返す。分は2桁ゼロ埋め。
-// 0時=午前0時、12時=午後0時、14時=午後2時。
+// 画面表示用：24時間制「◯時◯◯分」。分は2桁ゼロ埋め。
 export function formatTime(date) {
-  const hour24 = date.getHours()
+  const hour = date.getHours()
   const minute = date.getMinutes()
-  const period = hour24 < 12 ? '午前' : '午後'
-  const hour12 = hour24 % 12
   const mm = String(minute).padStart(2, '0')
-  return `${period}${hour12}時${mm}分`
+  return `${hour}時${mm}分`
 }
