@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1a3a5c">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <title>きょう</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="tap-area" aria-label="画面をタップすると今日の日付を読み上げます">
+    <p id="date-display" aria-live="polite">読み込み中…</p>
+    <button id="speak-button" type="button">日付を読み上げる</button>
+    <p id="hint">画面のどこを押しても読み上げます</p>
+  </main>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

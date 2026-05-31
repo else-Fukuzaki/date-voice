@@ -1,0 +1,47 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  font-family: system-ui, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  background: #f5f1e8;       /* やわらかい生成り色 */
+  color: #1a3a5c;            /* 濃紺：高コントラスト */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#tap-area {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6vh;
+  padding: 5vw;
+  cursor: pointer;
+  text-align: center;
+}
+
+#date-display {
+  font-size: clamp(48px, 18vw, 220px);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+#speak-button {
+  font-size: clamp(24px, 7vw, 56px);
+  font-weight: 700;
+  color: #fff;
+  background: #1a3a5c;
+  border: none;
+  border-radius: 16px;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+}
+
+#speak-button:active { background: #122a44; }
+
+#hint {
+  font-size: clamp(16px, 4vw, 28px);
+  color: #5a6a78;
+}
