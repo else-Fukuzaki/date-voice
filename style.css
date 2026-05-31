@@ -28,6 +28,13 @@ body {
   line-height: 1.15;
 }
 
+#time-display {
+  font-size: clamp(36px, 12vw, 140px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #2a4a6c;
+}
+
 #speak-button {
   font-size: clamp(24px, 7vw, 56px);
   font-weight: 700;

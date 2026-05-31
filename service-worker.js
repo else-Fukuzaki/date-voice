@@ -1,5 +1,5 @@
 // 最小キャッシュ。オフラインでも画面表示できるようにする。
-const CACHE = 'kyou-v1'
+const CACHE = 'kyou-v2'
 const ASSETS = [
   '.',
   'index.html',
