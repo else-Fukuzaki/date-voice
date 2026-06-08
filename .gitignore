@@ -1,3 +1,20 @@
 node_modules/
 .DS_Store
 .claude/
+
+# === Secrets (流出厳禁 / leak prevention) ===
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p8
+*.p12
+*.jks
+*.keystore
+key.properties
+google-services.json
+GoogleService-Info.plist
+*.mobileprovision
+service-account*.json
+secrets.json
